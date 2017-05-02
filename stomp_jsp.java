@@ -58,13 +58,16 @@ public final class stomp_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("        ");
 
-            Date date = new Date();
             
             Calendar cal = Calendar.getInstance();
-            cal.set(2016,1,1,0,0,0);
-            date = cal.getTime();
-            
-            out.print(date.getTime());
+            cal.set(2016,11,04,10,0,0);
+            Date past = cal.getTime();
+            Date date = new Date(past.getTime());
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日HH時mm分ss秒");
+            String sdate = sdf.format(date);
+            out.print(sdate);
+                
+             
         
       out.write("\n");
       out.write("    </body>\n");
