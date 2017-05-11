@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg932\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset128 HiraginoSans-W3;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 \
+mysql> create table profiles(profileID int,name varchar(255),tell varchar(255),age int,birthday date);\
+ERROR 1050 (42S01): Table 'profiles' already exists\
+mysql> insert into profiles values(1,'
+\f1 \'93\'63\'92\'86\'81\'40\'8e\'c0
+\f0 ',30,'1994-02-01','012-345-6789');\
+Query OK, 1 row affected (0.03 sec)\
+\
+mysql> insert into profiles values(2,'
+\f1 \'97\'e9\'96\'d8\'81\'40\'96\'ce
+\f0 ',37,'1987-08-12','090-1122-3344');\
+Query OK, 1 row affected (0.01 sec)\
+\
+mysql> insert into profiles values(3,'
+\f1 \'97\'e9\'96\'d8\'81\'40\'8e\'c0
+\f0 ',24,'2000-12-24','080-5566-7788');\
+Query OK, 1 row affected (0.01 sec)\
+\
+mysql> insert into profiles values(4,'
+\f1 \'8d\'b2\'93\'a1\'81\'40\'90\'b4
+\f0 ',19,'2005-08-01','012-0987-6543');\
+Query OK, 1 row affected (0.00 sec)\
+\
+mysql> insert into profiles values(5,'
+\f1 \'8d\'82\'8b\'b4\'81\'40\'90\'b4
+\f0 ',24,'2000-12-24','090-9900-1234');\
+Query OK, 1 row affected (0.01 sec)\
+\
+mysql> select profileID,name,age,birthday,tell FROM profiles;\
++-----------+--------------+------+------------+---------------+\
+| profileID | name         | age  | birthday   | tell          |\
++-----------+--------------+------+------------+---------------+\
+|         1 | 
+\f1 \'93\'63\'92\'86\'81\'40\'8e\'c0
+\f0      |   30 | 1994-02-01 | 012-345-6789  |\
+|         2 | 
+\f1 \'97\'e9\'96\'d8\'81\'40\'96\'ce
+\f0      |   37 | 1987-08-12 | 090-1122-3344 |\
+|         3 | 
+\f1 \'97\'e9\'96\'d8\'81\'40\'8e\'c0
+\f0      |   24 | 2000-12-24 | 080-5566-7788 |\
+|         4 | 
+\f1 \'8d\'b2\'93\'a1\'81\'40\'90\'b4
+\f0      |   19 | 2005-08-01 | 012-0987-6543 |\
+|         5 | 
+\f1 \'8d\'82\'8b\'b4\'81\'40\'90\'b4
+\f0      |   24 | 2000-12-24 | 090-9900-1234 |\
++-----------+--------------+------+------------+---------------+\
+5 rows in set (0.01 sec)\
+\
+mysql> \
+}
